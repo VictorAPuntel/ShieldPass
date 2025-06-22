@@ -33,6 +33,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 select {
@@ -57,9 +58,8 @@ select:focus {
   outline: 2px solid #4caf50;
 }
 
-.checkbox-group label {
+.checkbox-group {
   display: flex;
-  margin-bottom: 0.5rem;
   align-items: center;
   gap: 0.5rem;
 }
@@ -120,11 +120,30 @@ button:hover {
   margin-top: 2rem;
 }
 
-.checkbox-group {
-  margin-top: 1rem;
-}
-
 input[readonly] {
   cursor: default;
   background-color: #333;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1rem;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
 }

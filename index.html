@@ -17,7 +17,7 @@
       <section class="controls">
         <div class="password-selection">
           <label> Password Length: </label>
-          <select id="passwordLength">
+          <select id="passwordLength" name="passwordLength" required>
             <option value="" disabled selected hidden>Selecione</option>
             <option value="8">8</option>
             <option value="12">12</option>
@@ -25,23 +25,23 @@
           </select>
         </div>
 
-        <div class="checkbox-group">
-          <label
-            ><input type="checkbox" id="includeUppercase" /> Include Uppercase
-            Letters</label
-          >
-          <label
-            ><input type="checkbox" id="includeLowercase" /> Include Lowercase
-            Letters</label
-          >
-          <label
-            ><input type="checkbox" id="includeNumbers" /> Include
-            Numbers</label
-          >
-          <label
-            ><input type="checkbox" id="includeSymbols" /> Include
-            Symbols</label
-          >
+        <div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="includeUppercase" />
+            <label for="includeUppercase"> Include Uppercase Letters</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="includeLowercase" />
+            <label for="includeLowercase"> Include Lowercase Letters</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="includeNumbers" />
+            <label for="includeNumbers"> Include Numbers</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="includeSymbols" />
+            <label for="includeSymbols"> Include Symbols</label>
+          </div>
         </div>
 
         <button id="generateButton">Generate Password</button>
@@ -57,5 +57,10 @@
         <button id="copyButton">Copy to Clipboard 📋</button>
       </section>
     </main>
+    <div id="toast" class="toast">
+      Senha copiada para a área de transferência!
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
