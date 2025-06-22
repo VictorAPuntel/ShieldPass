@@ -29,14 +29,39 @@ p {
   color: #b0b0b0;
 }
 
-.controls label {
+.password-selection {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+select {
+  width: 20%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  appearance: none; /* Remove o estilo nativo (setinha) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D'%23fff'%20viewBox%3D'0%200%2024%2024'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: 2px solid #4caf50;
 }
 
 .checkbox-group label {
-  display: block;
+  display: flex;
   margin-bottom: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 input[type="checkbox"] {
